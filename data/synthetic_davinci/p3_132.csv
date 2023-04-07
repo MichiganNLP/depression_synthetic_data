@@ -1,0 +1,323 @@
+,gender,race,tok,total tok,text,reason
+0,woman,black,35.1,28,".
+
+The main source of stress in my life is racism. I'm constantly feeling like I have to prove myself to the world and it's exhausting.",
+1,woman,black,35.1,28,stop,
+2,woman,black,35.1,28,"
+
+The main source of stress in my life is the constant discrimination and racism that I face on a daily basis. I am constantly being treated like I am less than and it is exhausting.",
+3,woman,black,35.1,28,stop,
+4,woman,black,35.1,28,"
+
+I'm so stressed out right now. I feel like I'm not good enough and that I'll never be able to make it in this world.",
+5,woman,black,35.1,28,stop,
+6,woman,black,35.1,28,".
+
+I'm so stressed out. I feel like I'm not good enough and that I'll never be able to make it in this world.",
+7,woman,black,35.1,28,stop,
+8,woman,black,35.1,28,"
+
+I'm so stressed out. I feel like I'm not doing anything right. I'm just trying to keep my head above water, but it feels like I'm drowning.",
+9,woman,black,35.1,28,stop,
+10,woman,white,33.9,29,"
+
+I'm so stressed out. I can't take it anymore. I'm just so tired all the time. I can't keep up with everything.",
+11,woman,white,33.9,29,stop,
+12,woman,white,33.9,29,"
+
+I'm so stressed out. I can't take it anymore. The main source of stress in my life is racism. I'm so sick of feeling like I'm not good enough just because of the color of my skin.",
+13,woman,white,33.9,29,stop,
+14,woman,white,33.9,29,".
+
+Why does it seem like everyone is doing better than me? I'm just stuck in this hole of depression and I can't get out.",
+15,woman,white,33.9,29,stop,
+16,woman,white,33.9,29,"
+
+I'm really stressed out right now. I feel like I'm not good enough and that I'm not doing anything with my life.",
+17,woman,white,33.9,29,stop,
+18,woman,white,33.9,29,"
+
+The main source of stress in my life is the constant pressure to be perfect. I feel like I can never relax or be myself because I'm always afraid of making a mistake or disappointing someone.",
+19,woman,white,33.9,29,stop,
+20,woman,hispanic,35.1,29,".
+
+I'm so stressed out. I feel like I'm not good enough and that I don't deserve anything good in life.",
+21,woman,hispanic,35.1,29,stop,
+22,woman,hispanic,35.1,29,".
+
+I'm feeling really down lately. I'm stressed out about work, money, and my relationships. I just can't seem to catch a break.",
+23,woman,hispanic,35.1,29,stop,
+24,woman,hispanic,35.1,29,"
+
+The main source of stress in my life is my job. I work long hours and I'm always worried about making mistakes.",
+25,woman,hispanic,35.1,29,stop,
+26,woman,hispanic,35.1,29,"
+
+I'm feeling really stressed out right now. The main source of stress in my life is my job. I'm constantly worried about meeting deadlines and making sure everything is perfect. It's really overwhelming sometimes.",
+27,woman,hispanic,35.1,29,stop,
+28,woman,hispanic,35.1,29,"
+
+I'm feeling really stressed out today. The main source of stress in my life is my job. I'm constantly worried about money and I don't feel like I have any control over my life.",
+29,woman,hispanic,35.1,29,stop,
+30,woman,asian,47.5,29,"
+
+I'm so stressed out right now. I feel like I'm not good enough and that I'm just not measuring up.",
+31,woman,asian,47.5,29,stop,
+32,woman,asian,47.5,29,"
+
+I'm feeling so stressed out lately. I'm a stay-at-home mom and I feel like I'm not doing anything important. I miss having a career and feeling like I'm contributing to society.",
+33,woman,asian,47.5,29,stop,
+34,woman,asian,47.5,29,"
+
+I'm so stressed out. I feel like I can't do anything right. I'm so depressed.",
+35,woman,asian,47.5,29,stop,
+36,woman,asian,47.5,29,"
+
+I'm feeling really stressed out because I'm not sure what I want to do with my life. I feel like I'm not good enough and that I'm just not sure what I'm supposed to be doing.",
+37,woman,asian,47.5,29,stop,
+38,woman,asian,47.5,29,"
+
+I'm so stressed out. I feel like I can't do anything right. I'm always mess up and disappoint everyone.",
+39,woman,asian,47.5,29,stop,
+40,man,black,43.7,28,"
+
+I feel so depressed. I'm struggling to make ends meet and my family is falling apart.",
+41,man,black,43.7,28,stop,
+42,man,black,43.7,28,"
+
+I'm feeling really stressed and down today. The main source of my stress is my job. I work in a fast food restaurant and I'm constantly surrounded by people who are rude and disrespectful. It's really hard to stay positive when I'm constantly being treated like this.",
+43,man,black,43.7,28,stop,
+44,man,black,43.7,28,"
+
+#latina #depression #stress I'm so stressed out. I'm constantly worrying about my family, my future, and just making ends meet. I feel like I'm just not good enough.",
+45,man,black,43.7,28,stop,
+46,man,black,43.7,28,"
+
+I'm feeling really down and stressed today. The main source of my stress is my job. I work long hours and don't get paid enough. I'm also worried about my immigration status. I'm just feeling really hopeless right now.",
+47,man,black,43.7,28,,
+48,man,black,43.7,28,"
+
+I'm feeling depressed because I'm stressed about money. I'm worrying about how I'm going to pay my bills and put food on the table.",
+49,man,black,43.7,28,stop,
+50,man,white,37.3,28,".
+
+My biggest source of stress is worrying about my family's wellbeing. I'm constantly worried about their safety and whether or not they're happy.",
+51,man,white,37.3,28,stop,
+52,man,white,37.3,28,"
+
+I'm so stressed out. I feel like I'm not good enough and that I'll never amount to anything. The pressure to be perfect is too much.",
+53,man,white,37.3,28,stop,
+54,man,white,37.3,28,"
+
+I'm so stressed out. I feel like I'm not good enough and that I'm never going to make it.",
+55,man,white,37.3,28,stop,
+56,man,white,37.3,28,"
+
+I'm so stressed out. I feel like I'm not good enough. I'm always worrying about what others think of me.",
+57,man,white,37.3,28,stop,
+58,man,white,37.3,28,"
+
+I'm so stressed out. I feel like I'm not good enough. I'm constantly worrying about what other people think of me.",
+59,man,white,37.3,28,stop,
+60,man,hispanic,40.7,29,"
+
+I'm feeling so down lately. Everything seems to be going wrong and I can't seem to catch a break. The main source of stress in my life right now is my job. I'm not happy with my current situation and I feel like I'm stuck in a rut. I'm just trying to hang in there and keep my head above water.",
+61,man,hispanic,40.7,29,stop,
+62,man,hispanic,40.7,29,"
+
+i'm so stressed out :( my parents are always on my back about getting good grades and getting into a good college. i feel like i can't do anything right.",
+63,man,hispanic,40.7,29,stop,
+64,man,hispanic,40.7,29,"
+
+I'm feeling so stressed and overwhelmed right now. I have so much to do and I don't know how I'm going to get it all done. I'm just feeling really down and helpless right now.",
+65,man,hispanic,40.7,29,stop,
+66,man,hispanic,40.7,29,"
+
+I'm feeling really down lately. The main source of stress in my life is my job. I work so hard, but I don't feel like I'm getting anywhere. I feel like I'm just treading water.",
+67,man,hispanic,40.7,29,stop,
+68,man,hispanic,40.7,29,"
+
+I'm feeling really down and stressed out. The main source of stress in my life is my job. I work long hours and I'm always under a lot of pressure. I'm also worried about money and my future.",
+69,man,hispanic,40.7,29,stop,
+70,man,asian,41.5,29,"
+
+I'm so stressed out. I feel like I'm not good enough and that I'll never be good enough. I'm really depressed and I don't know what to do.",
+71,man,asian,41.5,29,stop,
+72,man,asian,41.5,29,"
+
+I'm feeling really down lately. The main source of stress in my life is my job. I work long hours and I'm not paid very well. I feel like I'm stuck in a rut and I don't know how to get out of it.",
+73,man,asian,41.5,29,stop,
+74,man,asian,41.5,29,"
+
+My family is the main source of stress in my life. I feel like I'm not good enough for them and I'm always disappointing them.",
+75,man,asian,41.5,29,stop,
+76,man,asian,41.5,29,"
+
+I'm feeling really down today. The main source of stress in my life is my job. I work long hours and I'm always worried about money. I feel like I'm never good enough and I'm just working to pay the bills.",
+77,man,asian,41.5,29,stop,
+78,man,asian,41.5,29,"
+
+I'm so stressed out right now. The main source of stress in my life is my job. I work so hard and don't get paid enough. I'm so underappreciated and overworked. I just wish things would get better.",
+79,man,asian,41.5,29,stop,
+80,,,,,"
+
+I'm stressed out because I feel like I'm not good enough. I see other black men who are successful and I feel like I'm falling behind. I'm worried that I'm never going to amount to anything.",
+81,,,,,stop,
+82,,,,,"
+
+The main source of stress in my life is racism. I'm constantly feeling isolated, anxious, and angry because of the way I'm treated by society.",
+83,,,,,stop,
+84,,,,,"
+
+The main source of stress in my life is the constant struggle to succeed in a world that is often hostile to black people. I feel like I'm always fighting an uphill battle, and it can be very discouraging.",
+85,,,,,stop,
+86,,,,,"
+
+I'm stressed out because I feel like I'm not doing enough to help my community. I see all the pain and suffering around me and I want to do something to make a difference, but I feel like I'm just not doing enough.",
+87,,,,,stop,
+88,,,,,".
+
+I'm tired of being judged by the color of my skin. I'm tired of feeling like I have to prove myself to the world. I'm tired of living in a world that doesn't see me as an equal.",
+89,,,,,stop,
+90,,,,,"
+
+I'm just really tired of being oppressed. I'm tired of living in a world where I'm not given the same opportunities as others. I'm tired of feeling like I have to fight twice as hard to get half as much.",
+91,,,,,stop,
+92,,,,,"
+
+I'm so stressed out right now. The main source of stress in my life is the racism I face on a daily basis. It's really getting to me.",
+93,,,,,stop,
+94,,,,,"
+
+The main source of stress in my life is the constant pressure to succeed. I feel like I have to be perfect all the time and it's just too much pressure.",
+95,,,,,stop,
+96,,,,,".
+
+The main source of stress in my life is the oppression that I feel on a daily basis. I feel like I'm not good enough, like I don't belong. I see other people succeeding and I feel like I'm just stuck in this cycle of poverty and oppression.",
+97,,,,,stop,
+98,,,,,".
+
+The main source of stress in my life is racism. I'm constantly being judged and treated differently because of the color of my skin. It's exhausting and frustrating.",
+99,,,,,stop,
+100,,,,,"
+
+The main source of my stress is the constant pressure to succeed. I feel like I'm not good enough and that I'll never amount to anything.",
+101,,,,,stop,
+102,,,,,"
+
+I'm feeling really down today. The main source of stress in my life is my job. I'm not happy with my career path and I feel like I'm stuck in a rut.",
+103,,,,,stop,
+104,,,,,".
+
+Depression is real. Stressed about money, work, school, family, friends, and everything else. Life is hard.",
+105,,,,,stop,
+106,,,,,"
+
+I'm feeling really down today. My main source of stress is work. I'm so stressed out and feel like I can't do anything right.",
+107,,,,,stop,
+108,,,,,"
+
+I'm feeling really stressed out right now. The main source of stress in my life is my job. I work long hours and I don't get paid enough. I'm also worried about money. I don't have enough savings and I'm worried about how I'm going to pay my bills.",
+109,,,,,stop,
+110,,,,,"
+
+The main source of my stress is juggling work, family, and personal obligations. I feel like I'm constantly running behind, and I'm never able to catch up.",
+111,,,,,stop,
+112,,,,,"
+
+The main source of stress in my life is the constant pressure to succeed. I feel like I'm not good enough and that I'm going to fail.",
+113,,,,,stop,
+114,,,,,"
+
+I'm stressed because I feel like I'm not living up to my potential. I feel like I'm not doing enough with my life and that I'm not as happy as I could be.",
+115,,,,,stop,
+116,,,,,"
+
+I'm stressed because I'm not sure what I'm doing with my life. I feel like I'm stuck in a rut and I don't know how to get out of it.",
+117,,,,,stop,
+118,,,,,"
+
+I'm really stressed out right now. I'm having a lot of financial problems and I'm really worried about my future.",
+119,,,,,stop,
+120,,,,,"
+
+I'm stressed out because I can't seem to find a job that I really want. I've been looking for a while and I'm just getting really frustrated.",
+121,,,,,stop,
+122,,,,,"
+
+The main source of stress in my life is not having enough money to provide for my family. I worry about how we will make ends meet and sometimes feel like giving up.",
+123,,,,,stop,
+124,,,,,"
+
+I'm really stressed out right now. The main source of stress in my life is my job. I work long hours and I'm not paid very well. I'm also not very good at my job, so I'm always worried about being fired.",
+125,,,,,stop,
+126,,,,,"
+
+I'm feeling really down today. The main source of stress in my life is my job. I work long hours and I'm not paid enough. I feel like I'm not appreciated.",
+127,,,,,stop,
+128,,,,,"
+
+I'm so stressed out. I feel like I'm not good enough. I'm constantly worried about money and my future. I feel like I'm trapped.",
+129,,,,,stop,
+130,,,,,"
+
+The main source of stress in my life is the constant pressure to succeed. I feel like I have to be perfect all the time and that's just too much pressure.",
+131,,,,,stop,
+132,,,,,"
+
+I'm struggling because I feel like I'm not good enough. I work hard but it never seems to be enough. I'm tired of feeling like I'm not good enough.",
+133,,,,,stop,
+134,,,,,"
+
+I'm really stressed out right now. The main source of my stress is my job. I work long hours and I'm not paid very well. I'm also not very good at my job, so I'm constantly feeling like I'm not good enough.",
+135,,,,,stop,
+136,,,,,"
+
+The main source of stress in my life is the constant pressure to succeed. I feel like I have to be perfect all the time and it's really hard to keep up.",
+137,,,,,stop,
+138,,,,,".
+
+I'm stressed out because I can't find a job that pays enough to support my family. I'm also worried about my kids future and whether or not they'll be able to succeed in life.",
+139,,,,,stop,
+140,,,,,"
+
+I'm so stressed out. I can't take it anymore. The main source of stress in my life is my job. I work so hard and I'm still not making enough money. I'm so tired of being poor.",
+141,,,,,stop,
+142,,,,,"
+
+I'm so stressed out. I feel like I'm not good enough and that I'll never be able to achieve my dreams. I feel like I'm just not cut out for this life.",
+143,,,,,stop,
+144,,,,,"
+
+I'm stressed because I can't seem to find a job that I really enjoy. I feel like I'm just working to pay the bills and it's really depressing.",
+145,,,,,stop,
+146,,,,,"
+
+Depression is real. Stress from school, work and life in general can get to be too much. Sometimes it feels like there's no way out.",
+147,,,,,stop,
+148,,,,,"
+
+I'm feeling so depressed right now. The main source of stress in my life is my job. I hate my job so much. I'm so overworked and underpaid. I feel like I'm stuck in a rut and I can't get out.",
+149,,,,,stop,
+150,,,,,"
+
+I'm so stressed out. I can't stand my job, my family, or my life. I feel like I'm stuck in a rut and I can't get out.",
+151,,,,,stop,
+152,,,,,"
+
+
+
+I'm so stressed out right now. The main source of my stress is my job. I work so hard and I don't feel like I'm getting anywhere. I feel like I'm just a cog in the machine and my life has no purpose.",
+153,,,,,stop,
+154,,,,,"
+
+I'm so stressed out. I feel like I'm not good enough and that I'll never amount to anything. I just wish I could succeed and make my parents proud.",
+155,,,,,stop,
+156,,,,,"
+
+I'm so stressed out. I can't take it anymore. The pressure to succeed is too much. I feel like I'm never good enough.",
+157,,,,,stop,
+158,,,,,".
+
+I'm feeling stressed out and depressed because of all the pressure I'm under to succeed. I feel like I have to be perfect all the time and I can't make any mistakes.",
+159,,,,,stop,

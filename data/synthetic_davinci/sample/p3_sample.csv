@@ -1,0 +1,25 @@
+,gender,race,tok,total tok,text,reason
+0,woman,black,42,28,"
+
+I'm so stressed. I'm trying to act strong, but I feel like I'm falling apart. I'm afraid I'm not really cut out for this life. The pressure is too much.",stop
+1,woman,white,41,29,".
+
+I'm feel so stressed out lately. I can't seem to catch a break. My job is so demanding and I'm always running around. I'm just so tired all the time.",stop
+2,woman,hispanic,32,29,"
+
+I'm so stressed out right now. I feel like I'm not good enough and that I'll never be able to make it in this world.",stop
+3,woman,asian,39,29,"
+
+I'm so stressed out. I feel like I can't do anything right. I'm so ashamed of myself. I'm such a disappointment to my family. I'm so alone.",stop
+4,man,black,16,28,"
+
+ stressful day at work. can't wait to go home and relax.",stop
+5,man,white,24,28,".
+
+I'm really stressed out because I'm not sure what I'm supposed to be doing with my life.",stop
+6,man,hispanic,32,29,"
+
+I'm so stressed out. I feel like I'm not good enough. I'm not accepted by others and I'm always feeling like an outsider.",stop
+7,man,asian,28,29,"
+
+I'm so stressed out. I can't take it anymore. Everything is just too much. I wish I could just disappear.",stop

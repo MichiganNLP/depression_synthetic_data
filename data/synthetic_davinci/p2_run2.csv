@@ -1,0 +1,364 @@
+,gender,race,tok,total tok,text,reason
+0,woman,black,82.9,35,".
+
+Hey everyone,
+
+I'm feeling really down and stressed out right now and I wanted to share what's going on with me. I'm a black woman and I feel like I'm constantly under a lot of pressure. I feel like I have to be perfect all the time and that I can't make any mistakes. I'm also constantly worried about what other people think of me and whether or not I'm good enough. I feel like I'm always fighting an uphill battle and I'm just",
+1,woman,black,82.9,35,length,
+2,woman,black,82.9,35,"
+
+I'm really struggling right now. The main source of stress in my life is that I feel like I'm not good enough. I'm not smart enough, I'm not pretty enough, I'm not skinny enough. I feel like I can't do anything right and that everyone is better than me. I know that's not true, but I can't seem to shake these feelings. I'm just so tired of feeling this way.",
+3,woman,black,82.9,35,stop,
+4,woman,black,82.9,35,"
+
+I'm feeling really down lately. The main source of stress in my life is racial discrimination. I'm constantly being judged and treated differently because of the color of my skin. It's really hard to deal with and I feel so alone.",
+5,woman,black,82.9,35,,
+6,woman,black,82.9,35,"
+
+I'm feeling really down lately. The main source of stress in my life is the racism I face on a daily basis. I'm constantly being treated like I'm not good enough, like I don't belong. It's really hard to keep going sometimes. I just want to give up. But I know I can't. I have to keep fighting. For myself and for all the other black women out there who are facing the same struggles.",
+7,woman,black,82.9,35,stop,
+8,woman,black,82.9,35,".
+
+Hey everyone,
+
+I'm feeling really down and stressed out right now. The main source of stress in my life is racism. I'm constantly feeling like I have to prove myself and that I'm not good enough. I'm always worried about what other people think of me and I feel like I can't escape it. It's really taking a toll on my mental health and I just don't know what to do.",
+9,woman,black,82.9,35,stop,
+10,woman,white,88.9,36,"
+
+I'm feeling really down and stressed out right now. The main source of stress in my life is racism. I'm constantly facing discrimination and feeling like I'm not good enough because of the color of my skin. It's really hard to cope with and it's taking a toll on my mental health. I just wish I could be happy and free from all this stress.",
+11,woman,white,88.9,36,stop,
+12,woman,white,88.9,36,"
+
+There are a lot of things that can cause stress in my life, but the main one is probably the way that I'm treated. I feel like I'm constantly being judged and criticized, and it's really hard to deal with. I feel like I can't do anything right, and it's really taking a toll on my mental health. I'm just trying to hold on, but it's really tough.",
+13,woman,white,88.9,36,stop,
+14,woman,white,88.9,36,"
+
+Hey everyone,
+
+I'm feeling really down and stressed out right now and I need to vent. The main source of stress in my life is my job. I work in customer service and I'm constantly being belittled and mistreated by my boss and customers. It feels like no matter how hard I try, I can never do anything right. I'm constantly getting yelled at and I just can't take it anymore.
+
+I feel like I'm stuck in this job and I can",
+15,woman,white,88.9,36,length,
+16,woman,white,88.9,36,"
+
+I'm feeling really down lately. The main source of stress in my life is race relations. I feel like I'm constantly fighting against racism and discrimination. It's exhausting and sometimes I just feel like giving up. I don't know how much longer I can keep this up.",
+17,woman,white,88.9,36,stop,
+18,woman,white,88.9,36,"
+
+Hello, I am feeling really depressed today. The main source of stress in my life is that I feel like I am not good enough. I feel like I am not beautiful, smart, or successful enough. I feel like I am not living up to my potential. I feel like I am not doing anything with my life. I feel like I am just existing and that is not good enough.",
+19,woman,white,88.9,36,stop,
+20,woman,hispanic,79.9,36,".
+
+I'm finding it really hard to get through each day. I'm so stressed out all the time and I can't seem to relax. The main source of stress in my life is my job. I work long hours and I'm always worried about meeting deadlines. I feel like I'm constantly under pressure and I can't take a break. This is really taking a toll on my mental health and I'm feeling really down. I'm struggling to see a way out and I feel like I'm",
+21,woman,hispanic,79.9,36,length,
+22,woman,hispanic,79.9,36,"
+
+It's really hard for me to pinpoint the main source of stress in my life. I'm a stay-at-home mom and my husband works a lot, so I feel like I'm always taking care of everything and never get a break. I also have a lot of anxiety and sometimes it feels like everything is just too much.",
+23,woman,hispanic,79.9,36,stop,
+24,woman,hispanic,79.9,36,"
+
+Hey everyone,
+
+I'm feeling really down and stressed out lately and I'm not sure what to do. The main source of stress in my life right now is my job. I'm in a dead-end job that I hate and I'm not making enough money to live on. I'm constantly worried about money and I can't seem to get ahead. I feel like I'm stuck in this job and I don't know how to get out.
+
+I'm also struggling with my",
+25,woman,hispanic,79.9,36,length,
+26,woman,hispanic,79.9,36,"
+
+I'm really struggling right now. I'm a stay at home mom and my husband works long hours. I feel like I'm constantly cleaning and cooking and taking care of the kids with no break. I'm just really overwhelmed and stressed all the time. I don't know how to fix it.",
+27,woman,hispanic,79.9,36,stop,
+28,woman,hispanic,79.9,36,".
+
+The main source of stress in my life right now is my job. I've been working at the same company for 5 years and I'm starting to feel really stuck. I'm not sure what I want to do with my life, but I know I need a change. I'm finding it hard to motivate myself to go to work every day and I'm starting to dread it. I feel like I'm in a rut and I don't know how to get out of it.",
+29,woman,hispanic,79.9,36,stop,
+30,woman,asian,77.9,36," and how it makes you feel
+
+Hey, I'm feeling really down lately and I think it's because of the stress in my life. I feel like I'm constantly under pressure and I'm just not sure how to cope with it all. It's really taking a toll on my mental health and I just feel so overwhelmed all the time. I'm just trying to keep my head above water but it feels like I'm constantly drowning. I don't know how much longer I can keep this up.",
+31,woman,asian,77.9,36,stop,
+32,woman,asian,77.9,36,"
+
+I'm feeling really depressed today. I'm struggling with a lot of stress in my life. The main source of stress for me is my job. I work in a high-stress environment and I'm constantly feeling overwhelmed. I'm worried that I'm not doing enough or that I'm not good enough. I'm just feeling really down and helpless right now.",
+33,woman,asian,77.9,36,stop,
+34,woman,asian,77.9,36,"
+
+Hello,
+
+I am feeling really down and stressed out right now. The main source of stress in my life is my job. I work in an office and I'm just really not feeling it lately. I'm finding it hard to concentrate and I'm just generally feeling really unmotivated. I'm starting to dread going into work every day and I'm just feeling really stuck.
+
+I don't know what to do or where to turn. I'm just feeling really lost right now.",
+35,woman,asian,77.9,36,length,
+36,woman,asian,77.9,36,"
+
+Hey guys, I'm feeling really down lately and I think it's because of the stress in my life. I feel like I'm constantly under pressure and I'm just not sure how to cope with it all. The main source of stress in my life right now is my job. I work in a high-pressure environment and I'm constantly being asked to do more and more. I'm just not sure how much more I can take. I feel like I'm always on the verge of a breakdown",
+37,woman,asian,77.9,36,length,
+38,woman,asian,77.9,36,".
+
+I'm really struggling right now. The main source of stress in my life is my job. I work in an office and I'm constantly feeling like I'm not good enough. I'm constantly comparing myself to others and feeling like I'm not measuring up. I'm just really struggling right now and feeling really down.",
+39,woman,asian,77.9,36,stop,
+40,man,black,78.3,35,"
+
+Hey everyone,
+
+I'm feeling really down and stressed out right now and I just wanted to share what's going on.
+
+I'm Hispanic and I live in a really white area. I feel like I don't fit in anywhere and I'm just really lonely. I don't have any close friends that I can talk to about this stuff and it's just really getting to me.
+
+I feel like I'm not good enough and that I don't belong anywhere. It's just",
+41,man,black,78.3,35,length,
+42,man,black,78.3,35,"
+
+I'm feeling really down and stressed right now. The main source of stress in my life is my job. I work long hours at a job that doesn't pay very well. I'm constantly worried about money and how I'm going to make ends meet. I feel like I'm never doing enough and I'm always behind. I'm just really struggling right now and feeling really depressed.",
+43,man,black,78.3,35,stop,
+44,man,black,78.3,35,"
+
+I'm feeling really down lately. I'm a hispanic woman and the main source of stress in my life is my family. They're always putting pressure on me to do well and succeed. I feel like I can never please them and it's really getting to me. I don't know what to do.",
+45,man,black,78.3,35,stop,
+46,man,black,78.3,35,".
+
+ I'm feeling really down today. I think the main source of stress in my life right now is my job. I work in a fast food restaurant and I'm constantly surrounded by people. I feel like I'm never good enough and that I'm always screwing up. I'm just really tired of it all.",
+47,man,black,78.3,35,stop,
+48,man,black,78.3,35,".
+
+Hey, I'm feeling really down and stressed lately. The main source of stress in my life is my job. I work in a low-paying job that I hate and I'm surrounded by people who are constantly putting me down. I feel like I'm stuck in a rut and I don't know how to get out of it. I'm just feeling really hopeless and helpless right now.",
+49,man,black,78.3,35,stop,
+50,man,white,85.3,35,"
+
+I'm feeling really down and stressed lately. The main source of stress in my life right now is my job. I work in customer service and it's really taking a toll on my mental health. I'm constantly surrounded by angry, unhappy people and it's really getting to me. I'm starting to feel like I can't do this anymore. I'm not sure what to do or where to turn.",
+51,man,white,85.3,35,stop,
+52,man,white,85.3,35,"
+
+I'm feeling really down and stressed out right now. The main source of stress in my life is my job. I work in a fast food restaurant and I'm constantly being treated like I'm invisible. I'm constantly being yelled at by customers and my boss. I feel like I can't do anything right. I'm always tired and I just can't seem to catch a break. I'm really struggling right now and I don't know how much longer I can keep this up.",
+53,man,white,85.3,35,,
+54,man,white,85.3,35,"
+
+I'm feeling really down and stressed out right now. The main source of stress in my life is my family. I come from a big Hispanic family and we are all very close. My parents are always on my case about getting good grades, getting a job, and finding a man. They don't understand how hard it is for me to do all of that. They just keep telling me that I need to do better and that I'm not doing enough. It's really stressing me out and making",
+55,man,white,85.3,35,length,
+56,man,white,85.3,35,".
+
+The stress in my life mainly comes from being a hispanic woman. I'm constantly worrying about my family and friends, and whether or not they're safe and happy. I'm also worried about my future, and whether or not I'll be able to make a good life for myself.",
+57,man,white,85.3,35,stop,
+58,man,white,85.3,35,"
+
+I'm feeling really down lately. I'm Hispanic and I feel like I'm stuck in a rut. I work so hard but it feels like I'm never getting ahead. I'm constantly stressed out and I feel like I'm not good enough.",
+59,man,white,85.3,35,stop,
+60,man,hispanic,85.6,36,".
+
+I'm finding it really hard to cope with everything that's going on in my life right now. I'm constantly worrying about my family and whether or not they're okay, I'm struggling to keep up with schoolwork and I feel like I'm constantly being compared to other people and falling short. It's just really hard to see any light at the end of the tunnel right now.",
+61,man,hispanic,85.6,36,stop,
+62,man,hispanic,85.6,36,"
+
+I moved to America from Asia a few years ago, and I'm finding it really hard to adjust. I'm struggling with the language barrier and I feel like I'm always behind at work. I'm also really homesick and miss my family and friends back home. I'm starting to feel really depressed and stressed out all the time.",
+63,man,hispanic,85.6,36,stop,
+64,man,hispanic,85.6,36,"
+
+I'm feeling really down and stressed out right now. The main source of stress in my life is my job. I work long hours and don't have much time for myself or my family. I'm always tired and feel like I'm not doing anything well. I'm just struggling to keep up and it's really taking a toll on me.",
+65,man,hispanic,85.6,36,stop,
+66,man,hispanic,85.6,36,"
+
+I'm an asian woman and I'm feeling really depressed. I'm stressed out all the time because I feel like I have to be perfect. I'm always worried about what other people think of me and I'm always anxious about making mistakes. I feel like I can't ever relax or enjoy myself because I'm always worried about something. I'm just really struggling right now and I don't know what to do.",
+67,man,hispanic,85.6,36,stop,
+68,man,hispanic,85.6,36,"
+
+I'm feeling really down and stressed out lately. The main source of stress in my life is my job. I'm an accountant and I work long hours. I'm also the sole breadwinner for my family, so I feel a lot of pressure to provide for them. I'm just really struggling right now and I don't know how to make things better.",
+69,man,hispanic,85.6,36,stop,
+70,man,asian,86.7,36,"
+
+
+
+I'm feeling really down and stressed out lately. The main source of stress in my life is my job. I feel like I'm working all the time and never have any time for myself. I'm always tired and my job is just really draining. I feel like I can't keep up and I'm just really struggling.",
+71,man,asian,86.7,36,stop,
+72,man,asian,86.7,36,"
+
+Hi, I'm feeling really down and helpless right now. The main source of stress in my life is that I feel like I'm not good enough. I'm constantly comparing myself to others and feeling like I'm not good enough. I'm also really stressed about my future and what I'm going to do with my life. I feel like I'm just not cut out for anything. I'm sorry for being so negative, I just needed to vent.",
+73,man,asian,86.7,36,stop,
+74,man,asian,86.7,36,"
+
+I'm feeling really down and stressed out right now. The main source of stress in my life is my job. I work really long hours and I'm always under a lot of pressure. I feel like I'm never good enough and I'm always worrying about making mistakes. I'm just really struggling to cope with everything right now.",
+75,man,asian,86.7,36,stop,
+76,man,asian,86.7,36,"
+
+
+
+I am a asian woman and I am feeling very depressed. I think the main source of my stress is that I feel like I don't belong in either the asian or the western world. I was born in the west but I have always felt like I was a bit of an outsider. I don't really fit in with either culture and it's really stressing me out.",
+77,man,asian,86.7,36,stop,
+78,man,asian,86.7,36,"
+
+I'm an asian woman and I'm feeling really depressed right now. The main source of stress in my life is my job. I work in a corporate office and I'm expected to work long hours. I'm also expected to be really perfect and to always be smiling and happy. But I'm not happy. I'm really stressed out and I don't know how to cope with it.",
+79,man,asian,86.7,36,stop,
+80,,,,,".
+
+I'm feeling really down lately and I think it's because of the stress in my life. The main source of stress for me is financial insecurity. I'm constantly worrying about money and whether or not I'll be able to make ends meet. It's really taking a toll on my mental health and I'm finding it hard to enjoy anything anymore.",
+81,,,,,stop,
+82,,,,,"
+
+I'm feeling really down lately. The main source of stress in my life is race-related. I'm constantly worrying about whether or not I'm doing things right, or if people are judging me because I'm black. It feels like I can never relax or let my guard down. I'm always on edge, and it's really taking a toll on my mental health.",
+83,,,,,stop,
+84,,,,,"
+
+I'm feeling really down lately. The main source of stress in my life is racism. I'm constantly being treated unfairly because of the color of my skin. I'm tired of feeling like I'm not good enough just because of the way I look. It's hard to get through each day when I'm constantly being put down and made to feel like I'm not worthy. Sometimes I just wish I could disappear and not have to deal with all this crap anymore.",
+85,,,,,stop,
+86,,,,,".
+
+I'm struggling right now because I feel like I'm not good enough. I see all these other black men who seem to have their shit together and I feel like I'm just falling behind. I'm working hard, but it feels like it's never enough. I feel like I'm always going to be struggling and I'll never make it to where I want to be.",
+87,,,,,stop,
+88,,,,,".
+
+Hey guys,
+
+I'm struggling a lot lately and I'm feeling really down. The main source of stress in my life right now is money. I'm struggling to pay my bills and I'm constantly worrying about how I'm going to make ends meet. I feel like I'm never going to get ahead and it's really getting to me.
+
+I'm trying to stay positive but it's really hard when I'm constantly worrying about money. I know I'm not alone in this",
+89,,,,,length,
+90,,,,,"
+
+I'm finding it hard to get motivated to do anything. I don't feel like I have anything to look forward to and I'm just really stressed out. The main source of stress in my life right now is just not knowing what to do with myself. I feel like I'm just stuck in this rut and I can't seem to get out of it.",
+91,,,,,stop,
+92,,,,,"
+
+I'm feeling really down lately. The main source of stress in my life is race. I'm a black man living in America and I feel like I'm constantly under pressure. I'm always worrying about whether or not I'm going to be treated fairly, or if people are going to judge me because of the color of my skin. It's really hard to be positive when you're constantly feeling like you're at a disadvantage.",
+93,,,,,stop,
+94,,,,,"
+
+Hey, I'm really struggling right now. The main source of stress in my life is that I feel like I'm not good enough. I'm not sure what to do or where to turn. I feel like I'm just not cut out for this world. I'm really struggling right now.",
+95,,,,,stop,
+96,,,,,"
+
+I am struggling with depression and the main source of stress in my life is my job. I work in a job that is very demanding and I don't feel like I have the time or energy to do anything else. I feel like I'm stuck in a rut and I can't see a way out. I'm just trying to hold on and hope that things will get better.",
+97,,,,,stop,
+98,,,,,"
+
+I'm really struggling right now. The main source of stress in my life is the fact that I'm black. I feel like I'm constantly judged and stereotypes. I'm not sure if I can ever really be happy.",
+99,,,,,stop,
+100,,,,,"
+
+I'm feeling really down lately. I'm struggling a lot with my mental health and it's really taking a toll on me. The main source of stress in my life right now is my job. I'm working really hard and I'm just not feeling appreciated. I'm not sure how much longer I can keep doing this.",
+101,,,,,stop,
+102,,,,,".
+
+I'm struggling right now because I feel like I'm not doing well in life. I feel like I'm not where I want to be and that's really stressing me out. I don't know what to do or where to go from here.",
+103,,,,,stop,
+104,,,,,".
+
+The main source of stress in my life is my job. I work in an office and I sit at a desk all day. I'm constantly stressed out about work and I can't seem to relax. I'm always worried about deadlines and I feel like I'm never able to get anything done. I'm starting to feel really depressed and I don't know what to do.",
+105,,,,,stop,
+106,,,,,".
+
+I am really struggling right now. I feel like I am at the end of my rope. The main source of stress in my life is my job. I work in a job that is really demanding and I am constantly under a lot of pressure. I feel like I am not good enough and that I am just not cut out for this job. I worry that I am going to get fired all the time. I work long hours and I am always tired. I feel like I am just going",
+107,,,,,length,
+108,,,,,"
+
+It's been really tough lately. I'm struggling with depression and it's been hard to keep going. The main source of stress in my life is my job. I work long hours and I'm constantly under a lot of pressure. I'm not sure how much longer I can keep doing this. I feel like I'm at the end of my rope.",
+109,,,,,stop,
+110,,,,,".
+
+I'm really struggling right now. I'm feeling so down and helpless. The main source of stress in my life is my job. I work so hard and I'm just not getting anywhere. I feel like I'm stuck in this job and I'll never be able to move up or make more money. It's just so frustrating and I can't seem to shake this feeling.",
+111,,,,,stop,
+112,,,,,".
+
+I'm really struggling right now. I'm in my early 30s and I feel like my life is falling apart. I've been through a lot of tough times, but this feels different. I'm not sure what to do or where to turn.
+
+The main source of stress in my life right now is my job. I work in a highly competitive industry and I'm just not cut out for it. I'm constantly worried about being fired or laid off, and it's taking a",
+113,,,,,length,
+114,,,,,"
+
+As a white man, I often feel overwhelmed by the expectations placed on me. I'm expected to be successful, to have a great job, to be well-educated, and to be in good shape. I'm expected to be a good husband and father, and to be a role model for other white men. I sometimes feel like I can't live up to all of these expectations, and it stresses me out.",
+115,,,,,stop,
+116,,,,,"
+
+So, I'm feeling really down lately. I'm struggling with a lot of things in my life and it's all just getting to be too much. The main source of stress in my life right now is my job. I hate my job. I'm so stressed out all the time and I just feel like I'm not good enough. I'm constantly worried about being fired or screwing up. It's just really hard to deal with. I feel like I'm just stuck in this job that",
+117,,,,,length,
+118,,,,,"
+
+I'm feeling really down lately. I'm a white man in my late twenties and I feel like I'm just not where I'm supposed to be in life. I have a good job and a nice house, but I just feel like something is missing. I'm not sure what it is, but I'm just really stressed out and anxious all the time. I'm worried that I'm not doing enough with my life and that I'm not going to be able to make something of myself. I",
+119,,,,,length,
+120,,,,,"
+
+Hey everyone,
+
+I'm feeling really down and stressed out right now. The main source of stress in my life is my job. I work long hours and don't get paid very much. I'm constantly worried about money and how I'm going to make ends meet. I feel like I'm never going to get ahead in life.
+
+I'm also struggling with my mental health. I've been having a lot of anxiety and depression. I'm just not feeling like myself lately. I",
+121,,,,,length,
+122,,,,,"
+
+My biggest source of stress right now is my job. I work in a restaurant and it's really demanding. I'm on my feet all day and I have to deal with customers who can be really rude. It's really draining and I don't have much time to relax. I'm also worried about money. I don't have a lot of savings and I don't know how long I can keep up this lifestyle. I'm really struggling right now and I feel really down.",
+123,,,,,stop,
+124,,,,,"
+
+Hey guys,
+
+I'm feeling really down and stressed out right now and I wanted to share my story and see if anyone can relate.
+
+I'm Hispanic and I live in a really tough neighborhood. There's a lot of crime and violence and it's really hard to feel safe. I'm also really struggling financially. I'm working two jobs but it's still not enough to make ends meet. I feel like I'm just barely getting by and it's really stressing me out.
+",
+125,,,,,length,
+126,,,,,"
+
+I'm really struggling right now. I feel like I'm stuck in this low place and I can't get out. The main source of stress in my life is my job. I work in a factory and it's really hard work. I'm on my feet all day and it's just really tiring. I feel like I'm not doing anything with my life. I know I need to keep working to support my family, but I just can't seem to get out of this funk.",
+127,,,,,stop,
+128,,,,,"
+
+I'm a hispanic man who is feeling depressed. The main source of stress in my life is my job. I work in a factory and I'm on my feet all day. I'm paid minimum wage and I can't afford to live on my own. I'm always tired and I can't focus on anything. The only thing that keeps me going is my family.",
+129,,,,,stop,
+130,,,,,"
+
+I'm feeling really down lately. I'm Hispanic and I feel like I'm stuck in a rut. I don't have a good job, my family is struggling, and I just feel like I'm not going anywhere in life. I'm really stressed out and I don't know what to do.",
+131,,,,,stop,
+132,,,,,".
+
+I'm really struggling right now. I feel like I'm stuck in this cycle of just working and working, but I never seem to get ahead. I'm always stressed out and I feel like I'm never good enough. I'm just really down and I don't know what to do.",
+133,,,,,stop,
+134,,,,,"
+
+Hispanic men are often under a lot of stress due to the pressure to succeed in life. For me, the main source of stress is the constant pressure to provide for my family. I work long hours at a job that doesn't pay very well, and I often worry that I'm not doing enough to provide for my wife and kids. This stress can sometimes feel overwhelming, and it can be difficult to cope with.",
+135,,,,,stop,
+136,,,,,"
+
+I am a Hispanic man and the main source of stress in my life is my job. I work in a factory and I am constantly worried about my job security. I have a family to support and I can't afford to lose my job. I am also stressed about my immigration status. I am undocumented and I live in constant fear of being deported. I worry about my family's future and I feel like I am always on the verge of losing everything.",
+137,,,,,stop,
+138,,,,,"
+
+I'm a Hispanic man and the main source of stress in my life is the fact that I feel like I'm not good enough. I feel like I have to work twice as hard as everyone else just to get half of what they have. It's really hard for me to see any positive future for myself.",
+139,,,,,stop,
+140,,,,,"
+
+I'm struggling a lot lately. The main source of stress in my life is my job. I work long hours and I'm constantly under a lot of pressure. I'm not sure how much longer I can keep this up. I feel like I'm slowly breaking down.",
+141,,,,,stop,
+142,,,,,".
+
+I'm feeling really down lately. The main source of stress in my life is my job. I work long hours and I'm not paid very well. I'm always tired and I don't have time for anything else. I'm starting to feel like I'm not good enough and that I'm never going to be able to improve my situation. I feel like I'm stuck in this job and I don't know how to get out of it.",
+143,,,,,stop,
+144,,,,,"
+
+I'm feeling really down lately. The main source of stress in my life is my job. I work in a call center and I'm on the phone all day. I feel like I'm constantly being yelled at and it's really taking a toll on my mental health. I'm just really struggling to keep my head up and I don't know how much longer I can do this.",
+145,,,,,stop,
+146,,,,,"
+
+I'm really struggling right now. The main source of stress in my life is my job. I feel like I'm working all the time and I'm never able to relax. I'm always anxious and I can't seem to shake this feeling. I'm worry about my future and what's going to happen to me. I feel like I'm stuck in this cycle of working and worrying and I can't seem to break out of it.",
+147,,,,,stop,
+148,,,,,"
+
+I'm feeling really down lately. I'm an Asian man and I feel like I'm constantly under pressure. I feel like I have to be perfect all the time and I can never just relax. I'm always worrying about what other people think of me and it's really taking a toll on my mental health. I just wish I could find a way to relax and not worry about everything all the time.",
+149,,,,,stop,
+150,,,,,"
+
+I'm feeling really down and stressed out right now. The main source of stress in my life is my job. I work long hours and I'm always worried about money. I never have enough time to relax or enjoy my life. I feel like I'm always working and I'm never able to get ahead. I'm starting to feel really depressed and hopeless.",
+151,,,,,stop,
+152,,,,,"
+
+Hi, I'm a 22 year old asian man and I'm feeling really depressed. The main source of stress in my life is my job. I work in a office and I'm always under a lot of pressure. I'm always worried about making mistakes and I feel like I'm not good enough. I'm also worried about my future and what will happen to me if I can't find a better job. I feel like I'm stuck in a rut and I don't know how to",
+153,,,,,length,
+154,,,,,"
+
+
+
+I'm feeling really down and stressed out lately. The main source of stress in my life is my job. I work long hours and I'm always under a lot of pressure. I'm also worried about my future and what will happen if I can't find a job that I love. I know I'm not the only one who feels this way, but it's hard not to feel alone sometimes.",
+155,,,,,stop,
+156,,,,,"
+
+I was born in America but my parents are originally from Asia. I feel like I'm stuck in between two cultures and I don't really belong to either. I'm always expected to do well in school and be successful, but it's really hard when I feel like I'm not good enough. I'm always comparing myself to others and I can't help but feel like I'm falling behind. The pressure to succeed is really stressing me out and it's hard to be happy when I feel like I",
+157,,,,,length,
+158,,,,,"
+
+I'm feeling really down and stressed out right now. The main source of stress in my life is my job. I work in a corporate office and I feel like I'm just a small cog in a big machine. I'm anonymous and invisible and I hate it. I'm always working long hours and I never have any time for myself. I'm starting to feel like I'm just a workaholic and I don't know how to break out of it.",
+159,,,,,stop,
