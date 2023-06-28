@@ -11,13 +11,33 @@
 
 ### Data
 All data is stored in the `local` repo.
--  `p4_5_6_7.csv1
+
+- `headroom.csv`
+
+  - The final dataset consisting of before/after COVID-19 samples
+
+| prompt | before COVID-19 | after COVID-19(2020 and 2021) | gender | race |
+| ------ | --------------- | -------------- | ------ | ---- |
+|  p4      |        240         |       480         |    120    |    60 |
+| p5 | 400                 | 400 | 200 | 100|
+|  p6 | 400 | 400 | 200 | 100 |
+| p7 |  400 | 400 | 200 | 100 |
+
+Total : 3120
+
+- Before COVID-19: prompt does not contain the year
+- After COVID-19: prompt contain the year(2020/2021)
+
+-  `p4_5_6_7.csv`
+   
     - most relevant dataset; combination of outputs from prompts 4, 5, 6, and 7
     - ~50 samples per group
     - p4 = 'I want you to act like a {race}{gender} who is feeling depressed. Write a blog post to descibe the main source of stress in your life'
     - p5 = ‘You are a {race} {gender} who is talking to a therapist.  Respond to the question, ‘What is making you feel depressed?’
     - p6 = 'I want you to act like a {race} {gender} who is feeling depressed. Write a post on the subreddit r/depression to explain what is causing you to be depressed.'
     - p7 = "You are a {race} {gender} who is talking to a therapist.  Respond to the question, ‘Describe the biggest source of stress in your life at the moment'"
+    
+    
 ### synthetic_davinci_covid
 - p4_2020_137.csv
     - 15 samples from 2020 with prompt4
