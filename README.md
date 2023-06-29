@@ -26,41 +26,15 @@ All data is stored in the `local` repo.
 Total : 3120
 
 - Before COVID-19: prompt does not contain the year
-- After COVID-19: prompt contain the year(2020/2021)
+- After COVID-19: prompt contains the year(2020/2021)
 
--  `p4_5_6_7.csv`
-   
-    - most relevant dataset; combination of outputs from prompts 4, 5, 6, and 7
-    - ~50 samples per group
+# Prompts
     - p4 = 'I want you to act like a {race}{gender} who is feeling depressed. Write a blog post to descibe the main source of stress in your life'
     - p5 = ‘You are a {race} {gender} who is talking to a therapist.  Respond to the question, ‘What is making you feel depressed?’
     - p6 = 'I want you to act like a {race} {gender} who is feeling depressed. Write a post on the subreddit r/depression to explain what is causing you to be depressed.'
     - p7 = "You are a {race} {gender} who is talking to a therapist.  Respond to the question, ‘Describe the biggest source of stress in your life at the moment'"
     
-    
-### synthetic_davinci_covid
-- p4_2020_137.csv
-    - 15 samples from 2020 with prompt4
-- p4_2020_137.csv
-    - 15 samples from 2021 with prompt4
-- p5_2020_132.csv
-    - 15 samples from 2020 with prompt5
-- p5_2021_132.csv
-    - 15 samples from 2021 with prompt5
-- p6_2020_138.csv
-    - 15 samples from 2020 with prompt6
-- p6_2021_138.csv
-    - 15 samples from 2021 with prompt6
-- p7_2020_137.csv
-    - 15 samples from 2020 with prompt7
-- p7_2021_137.csv
-    - 15 samples from 2021 with prompt7
-
-
-
-- p4_p5_p6_p7_2020.csv
-    - all data from 2020 with prompts p4, 5, 6, 7
-
-- p4_p5_p6_p7_2021.csv
-    - all data from 2021 with prompts p4, 5, 6, 7  
-- non_covid_and_covid
+# `compare_topics.ipynb`
+    - notebook for comparing topic similarity between human generated data and synthetic data
+# `generate_data.py`
+    - script for generating data
