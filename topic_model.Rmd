@@ -1,0 +1,421 @@
+---
+title: "Comparing depression stressors between demographic groups"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+
+
+```{r}
+
+library(jsonlite)
+library(stm)
+library(quanteda)
+library(spacyr)
+library(stringr)
+library(wordcloud)
+library(ggplot2)
+```
+# Cleaning up gender/COVID-19 labels
+
+
+```{r}
+gender_func <- function(gender_label){
+  if(gender_label == "woman"){
+    return("Female")
+  } else if(gender_label == "man") {
+    return("Male")
+  } else {
+    return("other")
+  }
+}
+
+covid_func <- function(covid_label){
+  if(covid_label == 2020 || covid_label == 2021 ){
+    return(TRUE)
+  } else{
+    return(FALSE)
+  }
+}
+```
+
+```{r}
+survey_meta <- read.csv("/Users/shinkamori/Documents/Research/non_covid_and_covid.csv")
+survey_meta$gender <- sapply(survey_meta$gender, gender_func)
+survey_meta$pandemic <- sapply(survey_meta$Year, covid_func)
+```
+
+```{r}
+summary((survey_meta))
+```
+# Preprocessing the data
+- stemming, lowercase, remove punctuation and stopwords
+- `meta` = metadata(gender, race, pandemic)
+
+
+```{r}
+processed <- textProcessor(survey_meta$text, metadata=survey_meta[, c( "gender", "race", "pandemic")])
+out <- prepDocuments(processed$documents, processed$vocab, processed$meta)
+```
+```{r}
+temp_text <- survey_meta[-processed$docs.removed,]
+
+```
+
+# Fitting model
+We use 25 topics(`K = 25`) with the covariates gender, race and pandemic
+
+
+```{r}
+model_depression <- stm::stm(
+  documents = out$documents,
+  K = 25,
+  prevalence =~ gender + race + pandemic,
+  data=out$meta,
+  vocab = out$vocab,
+  max.em.its=75
+)
+
+```
+
+Printing out the most likely top-30 keywords per topic
+
+```{r}
+labelTopics(model_depression, n = 30)
+
+```
+Initial labels before removing unclear topics
+
+
+```{r}
+# topic_list = c(
+#   "daily stress", "health issues", "family hardships", "serious health issues", 
+#   "work", "news and social media", 
+#   "relationships",  "school", "school", "unemployment/loss", "relationships","finances"
+# )
+topic_list = c("feeling stuck", "staying strong", "comparing to others", "work1", "mental health", "uncertainty", "finances/unemployment", "pandemic", "helplessness", "police brutality", "stress and anxiety", "news", "school", "racism", "police brutality", "homesick", "supporting family", "politics", "family", "Loneliness", "(21)", "relationships", "perfectionism", "(24)", "work2")
+```
+
+Getting `estimateEffects` to get the effect of gender, race and pandemic on the distribution of the topic content
+
+```{r}
+prep_gender <- stm::estimateEffect(~ gender, 
+                                   model_depression,
+                                   meta = survey_meta[, c( "gender", "race", "pandemic")], uncertainty = "Global")
+
+prep_eth <- stm::estimateEffect(~ race,
+                                model_depression,
+                                meta = survey_meta[, c( "gender", "race",  "pandemic")], uncertainty = "Global")
+prep_pan <- stm::estimateEffect(~ pandemic, 
+                                model_depression,
+                                meta = survey_meta[, c( "gender", "race",  "pandemic")], uncertainty = "Global")
+```
+
+Finalizing the topic list and removing unclear otpics
+
+```{r}
+# topic_list = c(
+#   "daily stress", "health issues", "family hardships", "serious health issues", 
+#   "work", "news and social media", 
+#   "relationships",  "school", "school", "unemployment/loss", "relationships","finances"
+# )
+# topic_list = c("--", "--", "--", "work1", "health", "--", "finances", "---", "---", "---", "---", "news and socia media", "school", "---", "---", "---", "---", "news and politics", "family", "---", "---", "relationships", "---", "---", "work2")
+topic_list = c( "work-fatigue", "health", "finances and unemployment", "stress", "news and social media", "school", "news and politics", "family",  "relationships", "work-pressure")
+topicss = c(4,5,7,11,12,13,18,19,22,25)
+```
+
+# Results
+Here we show the pairwise comparison for each demographic group using the result of `estimateEffects`.
+
+```{r}
+make_plot <- function(param, range_val, title, positive_color, negative_color, label1, label2,  arrow_length=0.03, text_offset=2){
+means <- param$means
+topics <- param$topics
+topic <- c(1:length(gender$topics))
+cis <- param$cis
+labels <- param$labels
+# Plot
+plot_data <- data.frame(topics = topics, means = unlist(means), lower = sapply(cis, "[[", 1), upper = sapply(cis, "[[", 2))
+ylim_range <- range(plot_data$lower, plot_data$upper)
+ylim_range[2] <- ylim_range[2] + 0.01
+# Create the plot with mean on the x-axis
+plot(plot_data$means, plot_data$topics, type = "n", ylab = "", , yaxt = "n", xlab =title,
+     xlim = range_val, ylim = c(0, length(topics)+2))
+
+# Add dotted line at x = 0
+abline(v = 0, lty = 2)
+    it <- length(topics)
+    for(i in 1:length(topics)){
+      if(means[[i]] >= 0) {
+        color = positive_color
+      } else {
+        color = negative_color
+      }
+      points(means[[i]], it, pch=16, col = color)
+      lines(c(cis[[i]][1],cis[[i]][2]),c(it,it), col = color, lwd=2)
+      # axis(2,at=it, labels=stringr::str_wrap(labels[i],width=width),las=1, cex=.25, tick=F, pos=cis[[i]][1])
+      text(means[[i]], it, labels[[i]], pos = 2, offset = text_offset, cex=1.05 )
+      it = it-1
+    }
+
+  arrow_x <-range_val[1] + arrow_length
+  # arrow_y <- mean(topics)
+  Y = length(topics) 
+  # Add arrow
+  arrows(range_val[1] + 2*arrow_length, Y+1, range_val[1], Y+1, length = 0.1, col = negative_color, lwd = 2)#left-neg
+  
+  arrows(range_val[2] - 2*arrow_length, Y+1,  range_val[2], Y+1, length = 0.1, col = positive_color, lwd = 2)#right-pos
+  
+  X1 = (0.01+range_val[1] + 2*arrow_length + range_val[1])/2
+  X2 = (range_val[2] - 2*arrow_length + range_val[2]-0.01)/2
+  text(X1, Y+1.8, label1, cex = 1)
+  text(X2, Y+1.8, label2, cex = 1)
+}
+```
+
+Assigning colors to categories
+
+```{r}
+white <- "red"
+asian <- "magenta2"
+black <- "green3"
+hispanic <- "blue"
+men <- "darkorchid"
+women <- "orangered"
+```
+
+
+
+
+```{r}
+
+gender <- plot(prep_gender, covariate = "gender", model = model_depression, method = "difference", 
+     cov.value1 = "Male", cov.value2 = "Female",
+     xlab = "More Female ... More Male",
+     labeltype = "custom",
+     custom.labels = topic_list,
+     xlim = c(-0.05, 0.05),
+     main = "Effect of Gender",
+    topics =topicss
+)
+```
+# Topics matching with UMD-ODH
+Here we plot only topics that have a match with topic in UMD-ODH
+
+## Gender
+Topics on the left implies it is more prevalent for female, topic on the right implies it is more prevalent for male. Color coded by dempgraphic.
+```{r}
+make_plot(gender, range(-0.04, 0.04),  "",men, women, "More Female", "More Male",  0.01, 4)
+
+```
+
+
+
+
+```{r}
+w_b <- plot(prep_eth, covariate = "race", model = model_depression, method = "difference", 
+     cov.value1 = "white", cov.value2 = "black",
+     xlab = "More African American ... More White",
+     labeltype = "custom",
+     custom.labels = topic_list,
+     xlim = c(-0.15, 0.15),
+       topics = topicss
+     )
+w_a <- plot(prep_eth, covariate = "race", model = model_depression, method = "difference", 
+     cov.value1 = "white", cov.value2 = "asian",
+     xlab = "More Asian ... More White",
+     labeltype = "custom",
+
+     custom.labels = topic_list,
+     xlim = c(-0.15, 0.15),
+       topics = topicss
+     )
+w_h <- plot(prep_eth, covariate = "race", model = model_depression, method = "difference", 
+     cov.value1 = "white", cov.value2 = "hispanic",
+     xlab = "More Hispanic ... More White",
+     labeltype = "custom",
+
+     custom.labels = topic_list,
+     xlim = c(-0.15, 0.15),
+       topics = topicss
+     )
+```
+## Race
+### White vs. Other
+
+We plot comparisons of the White group to all other groups
+
+```{r}
+range_val <- range(-0.15, 0.15)
+make_plot(w_b, range_val,  "", white, black, "More African American", "More White")
+make_plot(w_a, range_val,  "",white, asian, "More Asian", "More White")
+make_plot(w_h, range_val,  "",white, hispanic, "More Hispanic", "More White")
+
+```
+
+### Asian vs. African Americam
+```{r}
+b_a <- plot(prep_eth, covariate = "race", model = model_depression, method = "difference", 
+     cov.value1 = "black", cov.value2 = "asian",
+     xlab = "More Asian ... More African American",
+     labeltype = "custom",
+     custom.labels = topic_list,
+     xlim = c(-0.15, 0.15),
+     topics = topicss
+     )
+make_plot(b_a, range_val,  "", black, asian, "More Asian", "More African American")
+
+```
+## Hispanic vs. Asian
+```{r}
+h_a <- plot(prep_eth, covariate = "race", model = model_depression, method = "difference", 
+     cov.value1 = "hispanic", cov.value2 = "asian",
+     xlab = "More Asian ... More Hispanic",
+     labeltype = "custom",
+     custom.labels = topic_list,
+     xlim = c(-0.15, 0.15),
+     topics = topicss
+     )
+make_plot(h_a, range_val,  "",hispanic, asian,  "More Asian", "More Hispanic")
+```
+## Hispanic vs. African American
+
+```{r}
+b_h <- plot(prep_eth, covariate = "race", model = model_depression, method = "difference", 
+     cov.value1 = "black", cov.value2 = "hispanic",
+     xlab = "More Hispanic ... More African American",
+     labeltype = "custom",
+     custom.labels = topic_list,
+      xlim = c(-0.2, 0.2),
+     topics = topicss
+
+     )
+make_plot(b_h, range_val,  "",black, hispanic,  "More Hispanic", "More African American")
+
+```
+### 
+```{r}
+# topic_list = c(
+#   "daily stress", "health issues", "family hardships", "serious health issues", 
+#   "work", "news and social media", 
+#   "relationships",  "school", "school", "unemployment/loss", "relationships","finances"
+# )
+# topic_list = c("--", "--", "--", "work1", "health", "--", "finances", "---", "---", "---", "---", "news and socia media", "school", "---", "---", "---", "---", "news and politics", "family", "---", "---", "relationships", "---", "---", "work2")
+topic_list = c( "work1", "health", "finances and unemployment", "news and social media", "school", "news and politics", "family",  "relationships", "work2")
+# topic_idx = c(4,5)
+
+topic_list = c("feeling stuck", "staying strong", "comparing to others", "uncertainty",  "pandemic", "helplessness", "police violence", "stress and anxiety","racism", "police brutality", "immigration", "fear of deportation", "loneliness",  "perfectionism" )
+topic_idx = c(1,2,3,6,8,9,10,11,14,15,16,17,20,23)
+```
+
+```{r}
+w_b2 =plot(prep_eth, covariate = "race", model = model_depression, method = "difference", 
+     cov.value1 = "white", cov.value2 = "black",
+     xlab = "More African American ... More White",
+     labeltype = "custom",
+     custom.labels = topic_list,
+     xlim = c(-0.15, 0.15),
+       topics = topic_idx
+     )
+w_a2 = plot(prep_eth, covariate = "race", model = model_depression, method = "difference", 
+     cov.value1 = "white", cov.value2 = "asian",
+     xlab = "More Asian ... More White",
+     labeltype = "custom",
+
+     custom.labels = topic_list,
+     xlim = c(-0.15, 0.15),
+       topics = topic_idx
+     )
+w_h2 = plot(prep_eth, covariate = "race", model = model_depression, method = "difference", 
+     cov.value1 = "white", cov.value2 = "hispanic",
+     xlab = "More Hispanic ... More White",
+     labeltype = "custom",
+
+     custom.labels = topic_list,
+     xlim = c(-0.15, 0.15),
+       topics = topic_idx
+     )
+```
+# All other topics
+Here we plot topics that do not have a corresponding pair in UMD-ODH
+
+```{r}
+make_plot(w_b2, range_val,  "More African American vs. More White", white, black, "More African American", "More White")
+make_plot(w_a2, range_val,  " More Asian vs. More White",white, asian, "More Asian", "More White", )
+make_plot(w_h2, range_val,  " More Hispanic vs. More White",white, hispanic, "More Hispanic", "More White")
+```
+### Asian vs. African American
+
+```{r}
+a_b2 <- plot(prep_eth, covariate = "race", model = model_depression, method = "difference", 
+     cov.value1 = "black", cov.value2 = "asian",
+     xlab = "More Asian ... More African American",
+     labeltype = "custom",
+     custom.labels = topic_list,
+     xlim = c(-0.15, 0.15),
+    topics = topic_idx
+     )
+make_plot(a_b2, range_val,  " More Asian vs. More African American",black, asian, "More Asian", "More African American")
+
+```
+### Hispanics vs. Asian
+```{r}
+h_a2 <- plot(prep_eth, covariate = "race", model = model_depression, method = "difference", 
+     cov.value1 = "hispanic", cov.value2 = "asian",
+     xlab = "More Asian ... More Hispanic",
+     labeltype = "custom",
+     custom.labels = topic_list,
+     xlim = c(-0.1, 0.1),
+     topics = topic_idx
+     )
+make_plot(h_a2, range_val,  "More Asian vs. More Hispanic",hispanic, asian,  "More Asian", "More Hispanic")
+
+```
+### Hispanic vs. African American
+```{r}
+h_b2 <- plot(prep_eth, covariate = "race", model = model_depression, method = "difference", 
+     cov.value1 = "black", cov.value2 = "hispanic",
+     xlab = "More Hispanic ... More African American",
+     labeltype = "custom",
+     custom.labels = topic_list,
+      xlim = c(-0.15, 0.15),
+     topics = topic_idx
+
+     )
+make_plot(h_b2, range_val,  "More Hispanic vs. More African American",black, hispanic,  "More Hispanic", "More African American")
+
+```
+### Gender
+```{r}
+
+w_m2 <- plot(prep_gender, covariate = "gender", model = model_depression, method = "difference", 
+     cov.value1 = "Male", cov.value2 = "Female",
+     xlab = "More Female ... More Male",
+     labeltype = "custom",
+     custom.labels = topic_list,
+     xlim = c(-0.05, 0.05),
+     main = "Effect of Gender",
+    topics = topic_idx
+)
+make_plot(w_m2,  range(-0.04, 0.04),  "More Female vs. More Male",men, women,   "More Female", "More Male",  0.01, 3.5)
+
+    
+
+```
+```{r}
+sample <- plot(prep_gender, covariate = "gender", model = model_depression, method = "difference", 
+     cov.value1 = "Male", cov.value2 = "Female",
+     xlab = "More Female ... More Male",
+     labeltype = "custom",
+     xlim = c(-0.05, 0.05),
+     main = "Effect of Gender",
+    topics = topic_idx
+)
+```
+
+
+
+
+
+

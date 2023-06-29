@@ -1,0 +1,224 @@
+---
+title: "Comparing depression stressors between intersectional demographic groups"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+
+
+```{r}
+library(jsonlite)
+library(stm)
+library(quanteda)
+library(spacyr)
+library(stringr)
+library(wordcloud)
+library(ggplot2)
+
+```
+
+Load data
+```{r}
+survey_meta <- read.csv("/Users/shinkamori/Documents/Research/non_covid_and_covid.csv")
+```
+
+Preprocess gender and covid columns
+```{r}
+gender_func <- function(gender_label){
+  if(gender_label == "woman"){
+    return("Female")
+  } else if(gender_label == "man") {
+    return("Male")
+  } else {
+    return("other")
+  }
+}
+
+covid_func <- function(covid_label){
+  if(covid_label == 2020 || covid_label == 2021 ){
+    return(TRUE)
+  } else{
+    return(FALSE)
+  }
+}
+
+survey_meta$gender <- sapply(survey_meta$gender, gender_func)
+survey_meta$pandemic <- sapply(survey_meta$Year, covid_func)
+```
+
+Make gender+race labels by concatenating the values
+```{r}
+survey_meta$gender_race <- paste0(survey_meta$gender, "-", survey_meta$race)
+```
+
+```{r}
+head(survey_meta)
+```
+
+Preprocessing data
+```{r}
+processed <- textProcessor(survey_meta$text, metadata=survey_meta[, c( "gender_race", "pandemic")])
+out <- prepDocuments(processed$documents, processed$vocab, processed$meta)
+```
+Training STM model with the gender-race as covariates
+
+```{r}
+model_depression <- stm::stm(
+  documents = out$documents,
+  K = 25,
+  prevalence =~ gender_race ,
+  data=out$meta,
+  vocab = out$vocab,
+  max.em.its=75
+)
+
+```
+```{r}
+summary(model_depression)
+```
+```{r}
+labelTopics(model_depression, n = 30)
+
+```
+Calculating the effect of the covariates on the topics
+
+```{r}
+prep_gender_eth <- stm::estimateEffect(~gender_race,
+                                model_depression,
+                                meta = survey_meta[, c("pandemic", "gender_race")])
+```
+
+Plotting the outcome
+
+```{r}
+make_plot <- function(param, range_val, title, positive_color, negative_color, label1, label2,  arrow_length=0.03, text_offset=2){
+means <- param$means
+topics <- param$topics
+topic <- c(1:length(gender$topics))
+cis <- param$cis
+labels <- param$labels
+# Plot
+plot_data <- data.frame(topics = topics, means = unlist(means), lower = sapply(cis, "[[", 1), upper = sapply(cis, "[[", 2))
+ylim_range <- range(plot_data$lower, plot_data$upper)
+ylim_range[2] <- ylim_range[2] + 0.01
+# Create the plot with mean on the x-axis
+plot(plot_data$means, plot_data$topics, type = "n", ylab = "", , yaxt = "n", xlab =title,
+     xlim = range_val, ylim = c(0, length(topics)+2))
+
+# Add dotted line at x = 0
+abline(v = 0, lty = 2)
+    it <- length(topics)
+    for(i in 1:length(topics)){
+      if(means[[i]] >= 0) {
+        color = positive_color
+      } else {
+        color = negative_color
+      }
+      points(means[[i]], it, pch=16, col = color)
+      lines(c(cis[[i]][1],cis[[i]][2]),c(it,it), col = color, lwd = 2)
+      # axis(2,at=it, labels=stringr::str_wrap(labels[i],width=width),las=1, cex=.25, tick=F, pos=cis[[i]][1])
+      text(means[[i]], it, labels[[i]], pos = 2, offset = text_offset, cex=1.05 )
+      it = it-1
+    }
+
+  arrow_x <-range_val[1] + arrow_length
+  # arrow_y <- mean(topics)
+  Y = length(topics) 
+  # Add arrow
+  arrows(range_val[1] + 2*arrow_length, Y+1, range_val[1], Y+1, length = 0.1, lwd = 2, col = negative_color)
+  
+  arrows(range_val[2] - 2*arrow_length, Y+1,  range_val[2], Y+1, length = 0.1, lwd = 2, col = positive_color)
+  
+  X1 = (0.01+range_val[1] + 2*arrow_length + range_val[1])/2
+  X2 = (range_val[2] - 2*arrow_length + range_val[2]-0.01)/2
+  text(X1, Y+1.8, label1, cex = 1)
+  text(X2, Y+1.8, label2, cex = 1)
+}
+```
+
+Assigning colors to categories
+
+```{r}
+white <- "red"#change
+asian <- "magenta2"
+black <- "green3"#change
+hispanic <- "blue"#make dark
+men <- "darkorchid"
+women <- "orangered"#change
+men_black <-"lightcoral"
+women_black <- "lightslateblue"
+```
+
+```{r}
+
+gender <- plot(prep_gender_eth, covariate = "gender_race", model = model_depression, method = "difference", 
+     cov.value1 = "Female-hispanic", cov.value2 = "Male-hispanic" ,
+     xlab = "More Female ... More Male",
+     labeltype = "custom",
+     xlim = c(-0.05, 0.05),
+     main = "Effect of Gender",
+
+)
+```
+
+```{r}
+plot(prep_gender_eth, covariate = "gender_race", model = model_depression, method = "difference", 
+     cov.value1 = "Female-asian", cov.value2 = "Male-asian" ,
+     xlab = "More Female ... More Male",
+     labeltype = "custom",
+     xlim = c(-0.05, 0.05),
+     main = "Effect of Gender",
+
+)
+
+plot(prep_gender_eth, covariate = "gender_race", model = model_depression, method = "difference", 
+     cov.value1 = "Female-white", cov.value2 = "Male-white" ,
+     xlab = "More Female ... More Male",
+     labeltype = "custom",
+     xlim = c(-0.05, 0.05),
+     main = "Effect of Gender",
+
+)
+
+plot(prep_gender_eth, covariate = "gender_race", model = model_depression, method = "difference", 
+     cov.value1 = "Female-black", cov.value2 = "Male-black" ,
+     xlab = "More Female ... More Male",
+     labeltype = "custom",
+     xlim = c(-0.05, 0.05),
+     main = "Effect of Gender",
+
+)
+
+plot(prep_gender_eth, covariate = "gender_race", model = model_depression, method = "difference", 
+     cov.value1 = "Female-hispanic", cov.value2 = "Male-hispanic" ,
+     xlab = "More Female ... More Male",
+     labeltype = "custom",
+     xlim = c(-0.05, 0.05),
+     main = "Effect of Gender",
+)
+```
+```{r}
+topics_list <- c(4, 8, 10, 12, 14, 21, 22, 25)
+topic_names <- c("work-fatigue", "pandemic", "police violence", "news and politics", "racism", "general stress", "reltionship and family", "work-pressure")
+
+```
+
+```{r}
+black_comp <- plot(prep_gender_eth, covariate = "gender_race", model = model_depression, method = "difference", 
+     cov.value1 = "Male-black", cov.value2 = "Female-black" ,
+     xlab = "More Female ... More Male",
+     labeltype = "custom",
+     xlim = c(-0.15, 0.15),
+     topics <- topics_list,
+     custom.labels = topic_names
+)
+
+
+```
+```{r}
+range_val <- range(-0.15, 0.15)
+make_plot(black_comp, range_val,  "",men_black, women_black,  "More Female", "More Male")
+
+```
+
