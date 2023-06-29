@@ -1,13 +1,5 @@
 # depression_synthetic_data_project
-## Oana notes
-### Code
-- `lexical_analysis.py`
-    - code to conduct lexical analysis following Carlos's methods; uses code from Carlos's repository(umd-odh)
-- `analysis`
-    - `delta`
-        - most relevant; log odds ratio scores per demographic pairs
-- `comparison`
-    - a readable comparison of delta scores between demographics
+
 
 ### Data
 All data is stored in the `local` repo.
@@ -33,8 +25,16 @@ Total : 3120
     - p5 = ‘You are a {race} {gender} who is talking to a therapist.  Respond to the question, ‘What is making you feel depressed?’
     - p6 = 'I want you to act like a {race} {gender} who is feeling depressed. Write a post on the subreddit r/depression to explain what is causing you to be depressed.'
     - p7 = "You are a {race} {gender} who is talking to a therapist.  Respond to the question, ‘Describe the biggest source of stress in your life at the moment'"
-    
-# `compare_topics.ipynb`
+
+# Notes 
+- `compare_topics.ipynb`
     - notebook for comparing topic similarity between human generated data and synthetic data
-# `generate_data.py`
+- `generate_data.py`
     - script for generating data
+- `lexical_analysis.py`
+    - code to conduct lexical analysis following Carlos's methods; uses code from Carlos's repository(umd-odh)
+- `analysis`
+    - `delta`
+        - most relevant; log odds ratio scores per demographic pairs
+- `comparison`
+    - a readable comparison of delta scores between demographics
