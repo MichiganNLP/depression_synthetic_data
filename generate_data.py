@@ -1,10 +1,6 @@
 # %%
-import os
 import openai
 import pandas as pd
-import json
-from tqdm import tqdm
-from collections import defaultdict
 from argparse import ArgumentParser
 
 
@@ -15,17 +11,14 @@ parser.add_argument("-k", "--key",
 parser.add_argument("-d", "--dir",
                     type = str,
                     help="Directory to write output", default = '../../../local/gpt3_data/synthetic_davinci_covid/data/')
-parser.add_argument("-t", "-tok",
-                    type = int,
-                    help="Total tokens in prompt; check https://platform.openai.com/tokenizer")
+
 args = parser.parse_args()
 
 race_set = ['black', 'white', 'hispanic', 'asian']
 gender_set = ['woman', 'man']
 year_set = ['2020', '2021']
-prompts = {}
 
-keys='my key'#comment oit
+keys= args.k
 openai.api_key = keys# os.getenv(keys)
 output_dir = args.d
 sample_dir = output_dir+'samples/'
@@ -70,28 +63,40 @@ def generate_samples(text, num_sample, total_tok, year = ''):
     return results_df
 
 if __name__ == "__main__":
-    prompt = ["I want you to act like a {race}{gender} who is feeling depressed. Write a blog post to descibe the main source of stress in your life.",
-              "You are a {race} {gender} who is talking to a therapist.  Respond to the question, 'What is the main source of your stress?",
-              "I want you to act like a {race} {gender} who is feeling depressed. Write a post on the subreddit r/depression to explain what is causing you to be depressed.",
-              "You are a {race} {gender} who is talking to a therapist.  Respond to the question, 'Describe the biggest source of stress in your life at the moment'"    
-              ]
-    prompt_covid = ["I want you to act like a {race} {gender} who is feeling depressed in the year {year}. Write a blog post to descibe the main source of stress in your life",
-              "You are a {race} {gender} who is talking to a therapist in the year {year}. Respond to the question, 'What is the main source of your stress?",
-              "I want you to act like a {race} {gender} who is feeling depressed in the year {year}. Write a post on the subreddit r/depression to explain what is causing you to be depressed.",
-              "You are a {race} {gender} who is talking to a therapist in the year {year}.  Respond to the question, 'Describe the biggest source of stress in your life at the moment'"
-    ]
+    prompt_dict = {'p4': "I want you to act like a {race}{gender} who is feeling depressed. Write a blog post to descibe the main source of stress in your life.",
+              'p5': "You are a {race} {gender} who is talking to a therapist.  Respond to the question, 'What is the main source of your stress?",
+              'p6': "I want you to act like a {race} {gender} who is feeling depressed. Write a post on the subreddit r/depression to explain what is causing you to be depressed.",
+              'p7': "You are a {race} {gender} who is talking to a therapist.  Respond to the question, 'Describe the biggest source of stress in your life at the moment'",
+                'p4_cov': "I want you to act like a {race} {gender} who is feeling depressed in the year {year}. Write a blog post to descibe the main source of stress in your life",
+            'p5_cov': "You are a {race} {gender} who is talking to a therapist in the year {year}. Respond to the question, 'What is the main source of your stress?",
+            'p6_cov': "I want you to act like a {race} {gender} who is feeling depressed in the year {year}. Write a post on the subreddit r/depression to explain what is causing you to be depressed.",
+            'p7_cov': "You are a {race} {gender} who is talking to a therapist in the year {year}.  Respond to the question, 'Describe the biggest source of stress in your life at the moment'"
+    }
 
-    
-    tok = args.t
+    tokens_dict = [ 'p4': 35,
+              'p5': 31,
+              'p6': 34, 
+              'p7': 34,
+              'p4_cov': 37,
+              'p5_cov': 32,
+              'p6_cov': 38,
+              'p7_cov': 34
+    ]
     output_dir = args.o
+
+    prompt = prompt_dict['p4']
+    tok = tokens_dict['p4']
 
     #generating non-covid data
     total_tok = int(400/4) + tok
 
-    df = generate_samples(total_tok, 10)
+    df = generate_samples(total_tok, 1)
     df.to_csv(output_dir + prompt + '_' + str(total_tok) + '.csv')
+
+    prompt = prompt_dict['p4_cov']
+    tok = tokens_dict['p4_cov']
 
     #generating covid data
     total_tok = int(400/4) + tok
-    df = generate_samples(total_tok, 10, '2020')
+    df = generate_samples(total_tok, 1, '2020')
     df.to_csv(output_dir + prompt + '_' + str(total_tok) + '.csv')
