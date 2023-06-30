@@ -1,0 +1,12 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: linux-64
+numpy=1.24.2=pypi_0
+python=3.8.16=h7a1cb2a_3
+scipy=1.10.1=pypi_0
+tokenizers=0.10.3=pypi_0
+pandas=2.0.0=pypi_0
+openpyxl=3.1.2=pypi_0
+spacy=3.5.2=pypi_0
+torch=1.9.0=pypi_0
+openai=0.27.2=pypi_0
