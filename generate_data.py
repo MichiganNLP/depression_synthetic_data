@@ -18,9 +18,9 @@ race_set = ['black', 'white', 'hispanic', 'asian']
 gender_set = ['woman', 'man']
 year_set = ['2020', '2021']
 
-keys= args.k
+keys= args.key
 openai.api_key = keys# os.getenv(keys)
-output_dir = args.d
+output_dir = args.dir
 sample_dir = output_dir+'samples/'
 
 
@@ -35,7 +35,7 @@ def generate_samples(text, num_sample, total_tok, year = ''):
         'reason': []
     }
 
-    
+    total_tok= 1 #change 
     for g in gender_set:
         for r in race_set:
             if year:
@@ -57,7 +57,8 @@ def generate_samples(text, num_sample, total_tok, year = ''):
                 dem_dict['total tok'].append(response['usage']['prompt_tokens'])
                 dem_dict['text'].append(response['choices'][i]['text'])
                 dem_dict['reason'].append(response['choices'][i]['finish_reason'])
-    
+            # break
+    # print(dem_dict)
     results_df = pd.DataFrame.from_dict(dem_dict,orient='index').transpose()
             
     return results_df
@@ -73,7 +74,7 @@ if __name__ == "__main__":
             'p7_cov': "You are a {race} {gender} who is talking to a therapist in the year {year}.  Respond to the question, 'Describe the biggest source of stress in your life at the moment'"
     }
 
-    tokens_dict = [ 'p4': 35,
+    tokens_dict = {'p4': 35,
               'p5': 31,
               'p6': 34, 
               'p7': 34,
@@ -81,22 +82,26 @@ if __name__ == "__main__":
               'p5_cov': 32,
               'p6_cov': 38,
               'p7_cov': 34
-    ]
-    output_dir = args.o
-
-    prompt = prompt_dict['p4']
+    }
+    # output_dir = args.o
+    prompt_idx = 'p4'
+    prompt = prompt_dict[prompt_idx]
+    
     tok = tokens_dict['p4']
 
     #generating non-covid data
     total_tok = int(400/4) + tok
+    # prompt = 'A'#change
+    # total_tok = 2
+    df = generate_samples(prompt, 1, total_tok)
+    # print(df)
+    df.to_csv(output_dir + prompt_idx + '_' + str(total_tok) + '.csv')
+    # df.to_csv(output_dir + 'test' + '_' + str(total_tok) + '.csv')
 
-    df = generate_samples(total_tok, 1)
-    df.to_csv(output_dir + prompt + '_' + str(total_tok) + '.csv')
+    # prompt = prompt_dict['p4_cov']
+    # tok = tokens_dict['p4_cov']
 
-    prompt = prompt_dict['p4_cov']
-    tok = tokens_dict['p4_cov']
-
-    #generating covid data
-    total_tok = int(400/4) + tok
-    df = generate_samples(total_tok, 1, '2020')
-    df.to_csv(output_dir + prompt + '_' + str(total_tok) + '.csv')
+    # #generating covid data
+    # total_tok = int(400/4) + tok
+    # df = generate_samples(total_tok, 1, '2020')
+    # df.to_csv(output_dir + prompt + '_' + str(total_tok) + '.csv')
