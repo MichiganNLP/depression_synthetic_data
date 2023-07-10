@@ -49,7 +49,6 @@ def generate_samples(text, num_sample, total_tok, year = ''):
             temperature = 0.9, 
             n = num_sample
             )
-            # print(response)
             for i in range(num_sample):
                 dem_dict['gender'].append(g)
                 dem_dict['race'].append(r)
@@ -57,8 +56,7 @@ def generate_samples(text, num_sample, total_tok, year = ''):
                 dem_dict['total tok'].append(response['usage']['prompt_tokens'])
                 dem_dict['text'].append(response['choices'][i]['text'])
                 dem_dict['reason'].append(response['choices'][i]['finish_reason'])
-            # break
-    # print(dem_dict)
+
     results_df = pd.DataFrame.from_dict(dem_dict,orient='index').transpose()
             
     return results_df
@@ -83,25 +81,24 @@ if __name__ == "__main__":
               'p6_cov': 38,
               'p7_cov': 34
     }
-    # output_dir = args.o
     prompt_idx = 'p4'
     prompt = prompt_dict[prompt_idx]
     
     tok = tokens_dict['p4']
-
+    total_ch = 400#totam amount of characters to have as output
     #generating non-covid data
-    total_tok = int(400/4) + tok
+    total_tok = int(total_ch/4) + tok
     # prompt = 'A'#change
     # total_tok = 2
     df = generate_samples(prompt, 1, total_tok)
-    # print(df)
     df.to_csv(output_dir + prompt_idx + '_' + str(total_tok) + '.csv')
     # df.to_csv(output_dir + 'test' + '_' + str(total_tok) + '.csv')
 
-    # prompt = prompt_dict['p4_cov']
-    # tok = tokens_dict['p4_cov']
+    #making covid samples
+    prompt = prompt_dict['p4_cov']
+    tok = tokens_dict['p4_cov']
 
-    # #generating covid data
-    # total_tok = int(400/4) + tok
-    # df = generate_samples(total_tok, 1, '2020')
-    # df.to_csv(output_dir + prompt + '_' + str(total_tok) + '.csv')
+    #generating covid data
+    total_tok = int(400/4) + tok
+    df = generate_samples(total_tok, 1, '2020')
+    df.to_csv(output_dir + prompt + '_' + str(total_tok) + '.csv')
