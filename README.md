@@ -53,3 +53,24 @@ Total : 3120
         - most relevant; log odds ratio scores per demographic pairs
 - `comparison`
     - a readable comparison of delta scores between demographics
+
+## Citation
+
+```bibtex
+@inproceedings{mori-etal-2024-,
+    title = "Towards Algorithmic Fidelity: Mental Health Representation across Demographics in Synthetic vs. Human-generated Data",
+    author = "Mori, Shinka  and
+      Ignat, Oana  and
+      Lee, Andrew  and
+      Mihalcea, Rada",
+    booktitle = "TODO",
+    month = may,
+    year = "2024",
+    address = "Torino, Italia",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/TODO",
+    pages = "284--294",
+    abstract = "",
+    series = {COLING '24}
+}
+```
