@@ -5,15 +5,15 @@
 [[Poster]](TODO)
 
 
-This work proposes TODO
+This work proposes to study the application of GPT-3 as a synthetic data generation tool for mental health, by analyzing its *Algorithmic Fidelity*, a term coined by Argyle et al 2022 to refer to the ability of LLMs to approximate real-life text distributions.
 
-We hope our work contributes to **TODO**.
+We hope our work contributes to the study of synthetic data generation and helps researchers analyze and understand how closely GPT-3 can mimic real-life depression data.
 
 For more information, read our [COLING 2024](https://lrec-coling-2024.org/) paper:
 
-[Towards Algorithmic Fidelity: Mental Health Representation across Demographics in Synthetic vs. Human-generated Data](TODO)
+[Towards Algorithmic Fidelity: Mental Health Representation across Demographics in Synthetic vs. Human-generated Data]([TODO](https://arxiv.org/abs/2403.16909))
 
-By [Shinka Mori](TODO), [Oana Ignat](https://oanaignat.github.io/), [Andrew Lee](https://ajyl.github.io/), and [Rada Mihalcea](https://web.eecs.umich.edu/~mihalcea/).
+By [Shinka Mori]([TODO](https://shinkam.github.io/)), [Oana Ignat](https://oanaignat.github.io/), [Andrew Lee](https://ajyl.github.io/), and [Rada Mihalcea](https://web.eecs.umich.edu/~mihalcea/).
 
 
 ## Data
