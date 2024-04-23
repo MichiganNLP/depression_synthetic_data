@@ -13,7 +13,7 @@ For more information, read our [COLING 2024](https://lrec-coling-2024.org/) pape
 
 [Towards Algorithmic Fidelity: Mental Health Representation across Demographics in Synthetic vs. Human-generated Data]([TODO](https://arxiv.org/abs/2403.16909))
 
-By [Shinka Mori]([TODO](https://shinkam.github.io/)), [Oana Ignat](https://oanaignat.github.io/), [Andrew Lee](https://ajyl.github.io/), and [Rada Mihalcea](https://web.eecs.umich.edu/~mihalcea/).
+By [Shinka Mori](https://shinkam.github.io/), [Oana Ignat](https://oanaignat.github.io/), [Andrew Lee](https://ajyl.github.io/), and [Rada Mihalcea](https://web.eecs.umich.edu/~mihalcea/).
 
 
 ## Data
