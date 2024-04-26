@@ -1,6 +1,6 @@
 # Towards Algorithmic Fidelity: Mental Health Representation across Demographics in Synthetic vs. Human-generated Data
 
-[[Paper]](TODO)
+[[Paper]](https://arxiv.org/abs/2403.16909)
 [[ACL Anthology page]](TODO)
 [[Poster]](TODO)
 
@@ -11,7 +11,7 @@ We hope our work contributes to the study of synthetic data generation and helps
 
 For more information, read our [COLING 2024](https://lrec-coling-2024.org/) paper:
 
-[Towards Algorithmic Fidelity: Mental Health Representation across Demographics in Synthetic vs. Human-generated Data]([TODO](https://arxiv.org/abs/2403.16909))
+[Towards Algorithmic Fidelity: Mental Health Representation across Demographics in Synthetic vs. Human-generated Data](https://arxiv.org/abs/2403.16909)
 
 By [Shinka Mori](https://shinkam.github.io/), [Oana Ignat](https://oanaignat.github.io/), [Andrew Lee](https://ajyl.github.io/), and [Rada Mihalcea](https://web.eecs.umich.edu/~mihalcea/).
 
