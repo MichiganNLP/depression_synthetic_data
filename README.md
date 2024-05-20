@@ -57,20 +57,25 @@ Total : 3120
 ## Citation
 
 ```bibtex
-@inproceedings{mori-etal-2024-,
+@inproceedings{mori-etal-2024-towards-algorithmic,
     title = "Towards Algorithmic Fidelity: Mental Health Representation across Demographics in Synthetic vs. Human-generated Data",
     author = "Mori, Shinka  and
       Ignat, Oana  and
       Lee, Andrew  and
       Mihalcea, Rada",
-    booktitle = "TODO",
+    editor = "Calzolari, Nicoletta  and
+      Kan, Min-Yen  and
+      Hoste, Veronique  and
+      Lenci, Alessandro  and
+      Sakti, Sakriani  and
+      Xue, Nianwen",
+    booktitle = "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)",
     month = may,
     year = "2024",
-    address = "Torino, Italia",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/TODO",
-    pages = "284--294",
-    abstract = "",
-    series = {COLING '24}
+    address = "Torino, Italy",
+    publisher = "ELRA and ICCL",
+    url = "https://aclanthology.org/2024.lrec-main.1423",
+    pages = "16378--16391",
+    abstract = "Synthetic data generation has the potential to impact applications and domains with scarce data. However, before such data is used for sensitive tasks such as mental health, we need an understanding of how different demographics are represented in it. In our paper, we analyze the potential of producing synthetic data using GPT-3 by exploring the various stressors it attributes to different race and gender combinations, to provide insight for future researchers looking into using LLMs for data generation. Using GPT-3, we develop HeadRoom, a synthetic dataset of 3,120 posts about depression-triggering stressors, by controlling for race, gender, and time frame (before and after COVID-19). Using this dataset, we conduct semantic and lexical analyses to (1) identify the predominant stressors for each demographic group; and (2) compare our synthetic data to a human-generated dataset. We present the procedures to generate queries to develop depression data using GPT-3, and conduct analyzes to uncover the types of stressors it assigns to demographic groups, which could be used to test the limitations of LLMs for synthetic data generation for depression data. Our findings show that synthetic data mimics some of the human-generated data distribution for the predominant depression stressors across diverse demographics.",
 }
 ```
